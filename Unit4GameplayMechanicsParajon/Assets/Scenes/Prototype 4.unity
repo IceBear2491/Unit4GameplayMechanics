@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9740d3ef98ee820489b75f40506772f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateCamera
-  rotationSpeed: 20
+  rotationSpeed: 75
 --- !u!1 &621399975
 GameObject:
   m_ObjectHideFlags: 0
@@ -276,6 +276,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
   enemyPrefab: {fileID: 7813619669922124862, guid: 83e23be256f5e3143a4f12cab0f8d279, type: 3}
+  enemyCount: 0
+  waveNumber: 1
+  powerUpPrefab: {fileID: 2118752212101138547, guid: fb23c64d63af1c740ac3e75bc41e5abc, type: 3}
 --- !u!4 &621399978
 Transform:
   m_ObjectHideFlags: 0
@@ -444,7 +447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 154bedb0555163d44a2d2834ab4d37df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 3
+  hasPowerUp: 0
+  speed: 4
+  powerUpIndicator: {fileID: 1742898811060204}
 --- !u!1 &1211016355
 GameObject:
   m_ObjectHideFlags: 0
@@ -767,6 +772,68 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 8878a37eb67ddac4ead51890a31d6a18, type: 3}
+--- !u!1 &1742898811060204 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 999810135212594710, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+  m_PrefabInstance: {fileID: 127753954484814739}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &127753954484814739
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 999810135212594710, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+      propertyPath: m_Name
+      value: PowerUp Indicator
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203143356357477088, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.052
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203143356357477088, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.336
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203143356357477088, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.027
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203143356357477088, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203143356357477088, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203143356357477088, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203143356357477088, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203143356357477088, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203143356357477088, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9203143356357477088, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2c9fdf58c9d4c6b43a0a7ba4906a9f75, type: 3}
 --- !u!1001 &7305732181041295649
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -839,3 +906,4 @@ SceneRoots:
   - {fileID: 1140853920}
   - {fileID: 353257800}
   - {fileID: 621399978}
+  - {fileID: 127753954484814739}

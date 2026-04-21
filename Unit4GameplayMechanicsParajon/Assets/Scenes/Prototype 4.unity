@@ -275,7 +275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7445918bfe7a1a3478d7abacfa5decfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SpawnManager
-  enemyPrefab: {fileID: 7813619669922124862, guid: 83e23be256f5e3143a4f12cab0f8d279, type: 3}
+  enemyPrefab:
+  - {fileID: 7813619669922124862, guid: 83e23be256f5e3143a4f12cab0f8d279, type: 3}
+  - {fileID: 7813619669922124862, guid: dec3f7177d6891244a7732a7cd1a3d2e, type: 3}
   enemyCount: 0
   waveNumber: 1
   powerUpPrefab: {fileID: 2118752212101138547, guid: fb23c64d63af1c740ac3e75bc41e5abc, type: 3}
@@ -450,6 +452,8 @@ MonoBehaviour:
   hasPowerUp: 0
   speed: 4
   powerUpIndicator: {fileID: 1742898811060204}
+  currentPowerUp: 0
+  rocketPrefab: {fileID: 0}
 --- !u!1 &1211016355
 GameObject:
   m_ObjectHideFlags: 0
